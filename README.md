@@ -5,7 +5,7 @@
 > *"Be the guardian our planet needs"*
 
 ## 🌟 Inspiration
-In a world where environmental issues often go unreported, Green Guardian empowers citizens to become active protectors of our planet. Born during a 24-hour hackathon, this project aims to bridge the gap between environmental awareness and action.
+In a world where environmental issues often go unreported, Green Guardian empowers citizens to become active protectors of our planet. Born during Apex Hacks II hackathon, this project aims to bridge the gap between environmental awareness and action.
 
 ## 🚀 What it does
 Green Guardian is a revolutionary web platform that transforms everyday citizens into environmental defenders. With just a few clicks, users can:
@@ -25,7 +25,7 @@ Green Guardian is a revolutionary web platform that transforms everyday citizens
 - Modern, dark theme UI that's easy on the eyes
 - Lightning-fast performance with Vite
 
-## 🛠️ How we built it
+## 🛠️ How I built it
 
 ### Tech Stack Highlights:
 - ⚡ **React + Vite** - For blazing-fast performance
@@ -80,7 +80,7 @@ npm run dev
 ```
 
 ## 🌟 Demo
-Check out our live demo: [Green Guardian Demo](https://green-guardian-env.vercel.app)
+Check out our live demo: [Green Guardian Demo](https://green-guardian-u.vercel.app/)
 
 ## 👥 Team
 - [Angelos Eleftheriou](https://github.com/Angelel02) - Software Engineer
