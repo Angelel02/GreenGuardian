@@ -82,8 +82,6 @@ npm run dev
 ## 🌟 Demo
 Check out our live demo: [Green Guardian Demo](https://green-guardian-u.vercel.app/)
 
-## 👥 Team
+## 👥 Developer
 - [Angelos Eleftheriou](https://github.com/Angelel02) - Software Engineer
 
----
-*Built with 💚 for the planet*
