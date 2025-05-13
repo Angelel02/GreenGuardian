@@ -1,0 +1,58 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Set up Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+        env:
+          VITE_FIREBASE_API_KEY: "AIzaSyAwuBbkTuwcFWOUVOOGIjX2tsES-eOE62o"
+          VITE_FIREBASE_AUTH_DOMAIN: "green-guardian-bbfd1.firebaseapp.com"
+          VITE_FIREBASE_PROJECT_ID: "green-guardian-bbfd1"
+          VITE_FIREBASE_STORAGE_BUCKET: "green-guardian-bbfd1.firebasestorage.app"
+          VITE_FIREBASE_MESSAGING_SENDER_ID: "979473044987"
+          VITE_FIREBASE_APP_ID: "1:979473044987:web:f3dd9a755691a86389e75e"
+          VITE_FIREBASE_MEASUREMENT_ID: "G-CNHPTBJJKH"
+
+      - name: Create .nojekyll file
+        run: touch ./dist/.nojekyll
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: dist
+          branch: gh-pages
+          
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2
