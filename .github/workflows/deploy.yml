@@ -29,13 +29,7 @@ jobs:
       - name: Build
         run: npm run build
         env:
-          VITE_FIREBASE_API_KEY: "AIzaSyAwuBbkTuwcFWOUVOOGIjX2tsES-eOE62o"
-          VITE_FIREBASE_AUTH_DOMAIN: "green-guardian-bbfd1.firebaseapp.com"
-          VITE_FIREBASE_PROJECT_ID: "green-guardian-bbfd1"
-          VITE_FIREBASE_STORAGE_BUCKET: "green-guardian-bbfd1.firebasestorage.app"
-          VITE_FIREBASE_MESSAGING_SENDER_ID: "979473044987"
-          VITE_FIREBASE_APP_ID: "1:979473044987:web:f3dd9a755691a86389e75e"
-          VITE_FIREBASE_MEASUREMENT_ID: "G-CNHPTBJJKH"
+
 
       - name: Create .nojekyll file
         run: touch ./dist/.nojekyll
