@@ -2,6 +2,7 @@ import { useState } from 'react';
 import ReportForm from './components/ReportForm';
 import MapView from './components/MapView';
 import ReportList from './components/ReportList';
+import logo from './assets/Green_Guardian_logo_.png';
 import './App.css';
 
 function App() {
@@ -27,7 +28,7 @@ function App() {
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4 py-4 sm:py-0 sm:h-16">
             <div className="flex items-center">
               <img
-                src="/src/assets/Green_Guardian_logo_.png"
+                src={logo}
                 alt="Green Guardian"
                 className="h-16 sm:h-14 w-auto"
               />
