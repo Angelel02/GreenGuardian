@@ -11,7 +11,7 @@ permissions:
   id-token: write
 
 jobs:
-  deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -37,11 +37,14 @@ jobs:
           VITE_FIREBASE_APP_ID: "1:979473044987:web:f3dd9a755691a86389e75e"
           VITE_FIREBASE_MEASUREMENT_ID: "G-CNHPTBJJKH"
 
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Create .nojekyll file
+        run: touch ./dist/.nojekyll
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+          folder: dist
+          branch: gh-pages
           
   deploy:
     environment:
