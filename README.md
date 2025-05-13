@@ -85,8 +85,5 @@ Check out our live demo: [Green Guardian Demo](https://green-guardian-env.vercel
 ## 👥 Team
 - [Angelos Eleftheriou](https://github.com/Angelel02) - Full Stack Developer
 
-## 📄 License
-MIT License - feel free to use this project to make the world a better place! 🌱
-
 ---
-*Built with 💚 for the planet during Green Tech Hackathon - May 2025*
+*Built with 💚 for the planet*
