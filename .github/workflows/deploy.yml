@@ -24,18 +24,16 @@ jobs:
           cache: 'npm'
 
       - name: Install dependencies
-        run: npm ci
-
-      - name: Build
+        run: npm ci      - name: Build
         run: npm run build
         env:
-          VITE_FIREBASE_API_KEY: "AIzaSyAwuBbkTuwcFWOUVOOGIjX2tsES-eOE62o"
-          VITE_FIREBASE_AUTH_DOMAIN: "green-guardian-bbfd1.firebaseapp.com"
-          VITE_FIREBASE_PROJECT_ID: "green-guardian-bbfd1"
-          VITE_FIREBASE_STORAGE_BUCKET: "green-guardian-bbfd1.firebasestorage.app"
-          VITE_FIREBASE_MESSAGING_SENDER_ID: "979473044987"
-          VITE_FIREBASE_APP_ID: "1:979473044987:web:a65611e2e2f9deaf89e75e"
-          VITE_FIREBASE_MEASUREMENT_ID: "G-DGPE5Y0KMK"
+          VITE_FIREBASE_API_KEY: ${{ secrets.VITE_FIREBASE_API_KEY }}
+          VITE_FIREBASE_AUTH_DOMAIN: ${{ secrets.VITE_FIREBASE_AUTH_DOMAIN }}
+          VITE_FIREBASE_PROJECT_ID: ${{ secrets.VITE_FIREBASE_PROJECT_ID }}
+          VITE_FIREBASE_STORAGE_BUCKET: ${{ secrets.VITE_FIREBASE_STORAGE_BUCKET }}
+          VITE_FIREBASE_MESSAGING_SENDER_ID: ${{ secrets.VITE_FIREBASE_MESSAGING_SENDER_ID }}
+          VITE_FIREBASE_APP_ID: ${{ secrets.VITE_FIREBASE_APP_ID }}
+          VITE_FIREBASE_MEASUREMENT_ID: ${{ secrets.VITE_FIREBASE_MEASUREMENT_ID }}
 
       - name: Create .nojekyll file
         run: touch ./dist/.nojekyll
